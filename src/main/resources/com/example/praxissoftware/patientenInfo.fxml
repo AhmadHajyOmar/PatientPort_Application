@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="771.0" prefWidth="989.0" style="-fx-background-color: #8fb2e3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.praxissoftware.InfoController">
+   <children>
+
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="6.0" prefHeight="41.0" prefWidth="298.0" text="PatientPort " textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="60.0" fitWidth="43.0" layoutX="6.0" layoutY="-1.0" onMouseClicked="#handleBackClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/back_arrow.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="name" layoutX="151.0" layoutY="158.0" prefHeight="38.0" prefWidth="275.0" promptText="Name" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="155.0" prefHeight="42.0" prefWidth="68.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="90.0" prefHeight="46.0" prefWidth="337.0" text="Patient-Informationen" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="203.0" prefHeight="42.0" prefWidth="68.0" text="Age" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="age" layoutX="151.0" layoutY="206.0" prefHeight="39.0" prefWidth="275.0" promptText="Age" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="252.0" prefHeight="42.0" prefWidth="68.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="address" layoutX="151.0" layoutY="255.0" prefHeight="39.0" prefWidth="275.0" promptText="Address" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="294.0" prefHeight="42.0" prefWidth="68.0" text="Phone" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="phone" layoutX="151.0" layoutY="304.0" prefHeight="39.0" prefWidth="275.0" promptText="Phone" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="354.0" prefHeight="42.0" prefWidth="109.0" text="Insurance-Comp" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="insuranceComp" layoutX="151.0" layoutY="356.0" prefHeight="39.0" prefWidth="275.0" promptText="Insurance-Comp" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="403.0" prefHeight="42.0" prefWidth="68.0" text="Gender" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="gender" layoutX="151.0" layoutY="406.0" prefHeight="39.0" prefWidth="275.0" promptText="Gender" />
+      <TextArea fx:id="bloodPressure" layoutX="151.0" layoutY="454.0" onMouseClicked="#displayLineChartBloodPressure" prefHeight="39.0" prefWidth="275.0" promptText="Blood pressure" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="452.0" prefHeight="42.0" prefWidth="138.0" text="Blood pressure" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="494.0" prefHeight="42.0" prefWidth="138.0" text="Blood sugar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="bloodSugar" layoutX="151.0" layoutY="503.0" onMouseClicked="#displayLineChartBloodSugar" prefHeight="39.0" prefWidth="275.0" promptText="Blood sugar" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="542.0" prefHeight="42.0" prefWidth="155.0" text="Body Temperature" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="bodyTemperature" layoutX="151.0" layoutY="554.0" onMouseClicked="#displayLineChartBodyTemperature" prefHeight="39.0" prefWidth="275.0" promptText="Body Tempreture" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="600.0" prefHeight="42.0" prefWidth="155.0" text="Weight" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="weight" layoutX="151.0" layoutY="602.0" onMouseClicked="#displayLineChartWeight" prefHeight="39.0" prefWidth="275.0" promptText="Weight" />
+      <TextArea fx:id="pulse" layoutX="151.0" layoutY="654.0" onMouseClicked="#displayLineChartPulse" prefHeight="39.0" prefWidth="275.0" promptText="Pulse" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="652.0" prefHeight="42.0" prefWidth="155.0" text="Pulse" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="442.0" layoutY="155.0" prefHeight="42.0" prefWidth="155.0" text="Symptoms" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="symptomsListeUI" layoutX="465.0" layoutY="194.0" prefHeight="137.0" prefWidth="468.0" style="-fx-background-color: White; -fx-border-color: #d1d1d1; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-background-radius: 10px; -fx-text-fill: #333; -fx-font-size: 14px; -fx-font-weight: normal; -fx-background-color: transparent; -fx-background-color: #eaeaea;" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="442.0" layoutY="341.0" prefHeight="42.0" prefWidth="155.0" text="Treatments" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="treatmentListeUI" layoutX="465.0" layoutY="383.0" prefHeight="137.0" prefWidth="468.0" style="-fx-background-color: White; -fx-border-color: #d1d1d1; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-background-radius: 10px; -fx-text-fill: #333; -fx-font-size: 14px; -fx-font-weight: normal; -fx-background-color: transparent; -fx-background-color: #eaeaea;" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="455.0" layoutY="533.0" prefHeight="42.0" prefWidth="155.0" text="Medicines" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="medicineListeUI" layoutX="465.0" layoutY="572.0" prefHeight="137.0" prefWidth="468.0" style="-fx-background-color: White; -fx-border-color: #d1d1d1; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-background-radius: 10px; -fx-text-fill: #333; -fx-font-size: 14px; -fx-font-weight: normal; -fx-background-color: transparent; -fx-background-color: #eaeaea;" />
+   </children>
+</AnchorPane>

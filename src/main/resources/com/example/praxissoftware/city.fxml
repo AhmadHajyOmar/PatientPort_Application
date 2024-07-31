@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="990.0" style="-fx-background-color: #8fb2e3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.praxissoftware.CityMapController">
+   <children>
+      <AnchorPane layoutX="-7.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="990.0">
+         <children>
+
+               <VBox layoutX="50.0" layoutY="50.0" prefHeight="328.0" prefWidth="0.0" spacing="10" />
+            <ListView fx:id="patientenList" layoutX="37.0" layoutY="71.0" onMouseClicked="#handlePatientClick" prefHeight="501.0" prefWidth="274.0" style="-fx-background-color: White; -fx-border-color: #d1d1d1; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-background-radius: 10px; -fx-text-fill: #333; -fx-font-size: 16px; -fx-font-weight: normal; -fx-padding: 10px; -fx-background-color: transparent; -fx-background-color: #eaeaea;" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="27.0" prefHeight="41.0" prefWidth="298.0" text="Patients" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="31.0" />
+               </font>
+            </Label>
+            <Button layoutX="50.0" layoutY="581.0" mnemonicParsing="false" onAction="#removePatient" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-padding: 8 15 15 15; -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0; -fx-background-radius: 8; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 ); -fx-font-weight: bold; -fx-font-size: 1.1em; -fx-text-fill: white;" text="remove" />
+            <Button layoutX="184.0" layoutY="581.0" mnemonicParsing="false" onAction="#addPatientInfo" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-padding: 8 15 15 15; -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0; -fx-background-radius: 8; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 ); -fx-font-weight: bold; -fx-font-size: 1.1em; -fx-text-fill: white;" text="add Info" />
+        </children>
+      </AnchorPane>
+
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="6.0" prefHeight="41.0" prefWidth="298.0" text="PatientPort " textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="60.0" fitWidth="43.0" layoutX="6.0" layoutY="-1.0" onMouseClicked="#handleBackClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/back_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="city" fitHeight="580.0" fitWidth="622.0" layoutX="349.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/stadtkarte.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="43.0" layoutX="864.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/locallocation.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="nameteltxt" layoutX="419.0" layoutY="67.0" prefHeight="54.0" prefWidth="200.0" promptText="Name / Tel" />
+      <TextArea fx:id="addresstxt" layoutX="707.0" layoutY="67.0" prefHeight="54.0" prefWidth="200.0" promptText="Address" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="52.0" prefHeight="42.0" prefWidth="68.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="78.0" prefHeight="42.0" prefWidth="68.0" text="Tel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="632.0" layoutY="52.0" prefHeight="42.0" prefWidth="68.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="620.0" layoutY="8.0" prefHeight="42.0" prefWidth="160.0" text="Address Symbols" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="selectedAddress" fitHeight="25.0" fitWidth="25.0" layoutX="930.0" layoutY="40.0" onMouseClicked="#handleAddressClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/addressN.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="unselectedAddress" fitHeight="25.0" fitWidth="25.0" layoutX="930.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Adresse2.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="830.0" layoutY="-1.0" prefHeight="42.0" prefWidth="68.0" text="unselected" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="830.0" layoutY="31.0" prefHeight="42.0" prefWidth="68.0" text="selected" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

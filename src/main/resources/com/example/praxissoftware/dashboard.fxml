@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="989.0" style="-fx-background-color: #8fb2e3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.praxissoftware.DashBoardController">
+   <children>
+      <AnchorPane layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="805.0" prefWidth="990.0" style="-fx-background-color: White;">
+         <children>
+      
+               <VBox layoutX="50.0" layoutY="50.0" prefHeight="328.0" prefWidth="0.0" spacing="10" />
+      
+            <TextField fx:id="searchField" layoutX="299.0" layoutY="255.0" prefHeight="46.0" prefWidth="394.0" promptText="Search" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets topRightBottomLeft="5" />
+               </HBox.margin>
+            </TextField>
+               <ListView fx:id="patientListView" accessibleRole="COMBO_BOX" fixedCellSize="0.0" layoutX="299.0" layoutY="302.0" onMouseClicked="#handleSelectedPatient" prefHeight="98.0" prefWidth="394.0" style="-fx-background-color: #00000000;" />
+            <Circle fill="DODGERBLUE" layoutX="888.0" layoutY="606.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #8fb2e3;" />
+            <ImageView fx:id="addButton" fitHeight="46.0" fitWidth="43.0" layoutX="867.0" layoutY="585.0" onMouseClicked="#onClickPlus" pickOnBounds="true" preserveRatio="true">
+      
+               <Image url="@../../../images/medical.png" />
+            </ImageView>
+            <Separator layoutX="356.0" layoutY="114.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="0.0" />
+            <ImageView fitHeight="439.0" fitWidth="724.0" layoutX="293.0" layoutY="-195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button" layoutX="50.0" layoutY="575.0" mnemonicParsing="false" onAction="#onClickKarte" prefHeight="62.0" prefWidth="159.0" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-padding: 8 15 15 15; -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0; -fx-background-radius: 8; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 ); -fx-font-weight : bold; -fx-font-size: 1.1em; -fx-text-fill: white;" text="Stadtkarte" textOverrun="CLIP" />
+            <Button fx:id="buttonSearch" layoutX="700.0" layoutY="255.0" mnemonicParsing="false" onAction="#onTypeName" prefHeight="46.0" prefWidth="95.0" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a33456 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c11156); -fx-padding: 8 15 15 15; -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0; -fx-background-radius: 8; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 ); -fx-font-weight: bold; -fx-font-size: 1.1em; -fx-text-fill: white;" text="search" textOverrun="CLIP" />
+
+
+        </children>
+      </AnchorPane>
+
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="6.0" prefHeight="41.0" prefWidth="298.0" text="PatientPort " textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

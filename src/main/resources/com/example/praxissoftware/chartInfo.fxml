@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="989.0" style="-fx-background-color: #8fb2e3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.praxissoftware.ChartController">
+   <children>
+
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="6.0" prefHeight="41.0" prefWidth="298.0" text="PatientPort " textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="60.0" fitWidth="43.0" layoutX="6.0" layoutY="-1.0" onMouseClicked="#handleBackClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/back_arrow.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="90.0" prefHeight="46.0" prefWidth="438.0" text="Patient-Informationen-Visits" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="name" layoutX="92.0" layoutY="143.0" prefHeight="39.0" prefWidth="275.0" promptText="Data" />
+   </children>
+</AnchorPane>
